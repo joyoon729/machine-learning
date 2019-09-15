@@ -35,6 +35,8 @@
 
 ### Voting
 
+![Voting](introduction-to-ensemble-learning.assets/1568559769298.png)
+
 **Voting** 방식은 여러개의 머신러닝 알고리즘이 내놓은 결과들 중에서 투표를 통해서 최종 예측값을 결정하는 방식입니다.
 
 예를 들어, 타이타닉의 어떤 승객이 생존자일지, 사망자일지 예측할 때 10개의 **서로 다른** 머신러닝 알고리즘 중 6개는 생존, 4개는 사망으로 예측했다면 해당 승객의 최종 결과는 '생존' 으로 결정짓는 것이죠.
@@ -50,6 +52,8 @@
 
 
 ## 2. Bagging
+
+![Bagging](introduction-to-ensemble-learning.assets/1568559881103.png)
 
 **Bagging** 은 **B**ootstrap **Agg**regat**ing** 의 약자인데, 말그대로 *일련의 과정들을 집계*하게 됩니다.
 
@@ -75,6 +79,8 @@
 
 ## 3. Boosting
 
+![Boosting](introduction-to-ensemble-learning.assets/1568559902068.png)
+
 **Boosting** 방식은 여러개의 머신러닝 알고리즘 모델들이 길게 줄을 서 있고 앞의 머신러닝의 결과를 넘겨받고, 뒤의 머신러닝에게 자신의 학습결과를 넘겨주는 방식이라고 보면 됩니다.
 
 각 머신러닝 모델들이 **순차적**으로 학습을 하고 잘못 예측한 데이터에 대해 **가중치를 부여**하고, 뒤의 머신러닝 모델이 해당 **오류를 개선**해나가며 학습-예측 합니다.
@@ -99,14 +105,16 @@
 
 ### Stacking
 
-**Stacking** 방식은 stacked generalization 이라고도 하는데, 전체 train 데이터셋을 <u>**머신러닝 알고리즘으로**</u> 새로운 train 데이터셋을 만듭니다.
+![Stacking](introduction-to-ensemble-learning.assets/1568560109196.png)
 
-그리고 이 새롭게 생성된 train 데이터셋을 다시 머신러닝 알고리즘으로 학습하는 것입니다.
+**Stacking** 방식은 stacked generalization 이라고도 하는데, 전체 train 데이터셋을 <u>**머신러닝 알고리즘으로**</u> **sub predict** 데이터셋을 만듭니다.
+
+그리고 이 새롭게 생성된 **sub predict** 데이터셋을 다시 머신러닝 알고리즘으로 학습하는 것입니다.
 
 말하자면, 머신러닝 알고리즘이
 
-- 새 훈련 데이터셋을 만들기 위한 머신러닝 알고리즘
-- 새 훈련 데이터셋을 바탕으로 최종 예측값을 만들기 위한 머신러닝 알고리즘
+- **sub predict** 데이터셋을 만들기 위한 머신러닝 알고리즘
+- **sub predict** 데이터셋을 바탕으로 최종 예측값을 만들기 위한 머신러닝 알고리즘
 
 이렇게 2가지에 쓰이게 됩니다.
 
@@ -115,4 +123,3 @@
 ### Blending
 
 **Stacking** 과 유사한 방법(거의 혼용해서 사용)이지만, **Stacking** 은 cross-fold-validation 을 사용하고, **Blending**은 holdout-validation 을 사용한다는 점이 다르다고 합니다.
-
