@@ -122,3 +122,10 @@
 ### Blending
 
 **Stacking** 과 유사한 방법(거의 혼용해서 사용)이지만, **Stacking** 은 cross-fold-validation 을 사용하고, **Blending**은 holdout-validation 을 사용한다는 점이 다르다고 합니다.
+
+
+
+## Reference
+
+[https://subinium.github.io/introduction-to-ensemble-1/](https://subinium.github.io/introduction-to-ensemble-1/)
+
